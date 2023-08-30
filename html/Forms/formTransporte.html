@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <header>
+        <h1>Formulário De Transporte</h1>
+    </header>
+    <article>
+        <form action="mailto:gomes24menez@gmail.com" method="post" 
+        oninput="resultado.value = parseInt(valor01.value) + parseInt(valor02.value)">
+            
+            <fieldset>
+                <legend><strong>Identificação:</strong></legend>
+                <br>
+                <label for="cNome">Nome:</label>
+                <input type="text" name="nome" id="cNome" size="50" required placeholder="Augustinho Carrara">
+                <br> <br>
+                <label for="email">e-Mail:</label>
+                <input type="email" id="email" name="email" size="50" placeholder="Exemplo@exemplo.com" required>
+                <br> <br>
+                <p>Você Mora:</p>
+                <input type="radio" name="lugar" id="city" value="C">
+                <label for="city">Cidade</label>
+                <br> <br>
+                <input type="radio" name="lugar" id="downtown" value="D">
+                <label for="downtown">Interior</label>
+            </fieldset>
+            <br> <br>
+            <fieldset>
+                <legend><strong>Informações Extras</strong></legend>
+                <p>Qual Meio De Transpote Você Usa?</p>
+                <input type="checkbox" name="transporte1" id="bike" value="bike">
+                <label for="bike">Bicicleta</label>
+                <br>
+                <input type="checkbox" name="Transporte2" id="car" value="car">
+                <label for="car">Carro</label>
+                <br>
+                <input type="checkbox" name="Transporte3" id="metro" value="metro">
+                <label for="metro">Metrô</label>
+                <br>
+                <input type="checkbox" name="transporte4" id="bus" value="bus">
+                <label for="bus">Ônibus</label>
+                <br> <br>
+
+                <!--Select cria uma lista de opções-->
+                <label for="game">Escolha Seu Tipo De Jogo: &nbsp;</label>
+                <select name="game" id="game">
+                    <!--option é as opções da lista-->
+                    <!--value são os valores de escolha-->
+                    <option value="fps">FPS</option>
+                    <option value="adv">Adventure</option>
+                    <option value="rpg">RPG</option>
+                    <option value="moba">M.O.B.A</option>
+                    <option value="sport">Sport's</option>
+                    <option value="puzzle">Puzzle</option>
+                </select>
+                <br> <br>
+
+                <!--Aqui se inicia o datalist ou lista de dados-->
+                <label for="regiao">Escolha Sua Cidade: </label>
+                <input list="cidade" name="city2" id="regiao" placeholder="Digite sua cidade" autocomplete="on">
+                <!--datalist é a lista de opções-->
+                <datalist id="cidade">
+                    <option value="Recife"></option>
+                    <option value="Olinda"></option>
+                    <option value="Cabo"></option>
+                    <option value="Paulista"></option>
+                    <option value="Moreno"></option>
+                    <option value="Camaragibe"></option>
+                    <option value="Jaboatão dos Guararapes"></option>
+                    <option value="Cabrobó"></option>
+                </datalist>
+            </fieldset>
+            <br><br>
+            <fieldset>
+                <legend><strong>Sua Opinião</strong></legend>
+            <label for="valor01">O quanto você curtio o Formulário: </label>
+            <br> <br>
+            0
+            <input type="range" id="valor01" name="valor01"> 
+            100 +
+            <input type="number" name="valor02" id="valor02" value="0">
+            =
+            <output name="resultado" id="resultado" value="" ></output>
+            <br>
+            <p>Sugestões, elogios e críticas:</p>
+            <textarea name="msg" cols="30" rows="10" placeholder="Digite Sua Mensagem..." required></textarea> <br> 
+            </fieldset>
+           <br>
+            <input type="submit" value="Enviar">
+        </form>
+    </article>
+    <br><br><hr>
+    <footer>
+        By Rafael Henrique &copy;
+    </footer>
+    
+</body>
+</html>
